@@ -5,50 +5,86 @@ tk:
   teekHome: false
 
 hero:
-  name: Teek
-  text: VitePress 主题
-  tagline: ✨一个轻量、简洁高效、灵活配置，易于扩展的 VitePress 主题
+  name: "JiMuQu Admin"
+  text: "管理系统脚手架"
+  image:
+    src: /Bug Fixing 2.svg
+    alt: 积木区 Banner
+    width: 320
+    height: 320
+  tagline: 新一代Java企业级通用管理系统脚手架 🚩为中国国产化匠心打造❗
   actions:
     - theme: brand
-      text: 开始
+      text: 快速开始
       link: /guide/quickstart
     - theme: alt
-      text: 配置
-      link: /reference/config
-  image:
-    src: /teek-logo-large.png
-    alt: Teek
+      text: 演示系统
+      link: https://admin.jimuqu.com
 
 features:
-  - icon: 📖
-    title: 结构化 && 体系化
-    details: 自动生成侧边栏、目录页、索引页、面包屑等，轻松构建一个结构化知识库。
-  - icon: 🎉
-    title: 碎片化 & 个性化
-    details: 提供快速构建知识的碎片化形态，并提供大量个性化的主题配置。
-  - icon: 🎇
-    title: 文档风 & 博客风
-    details: 支持通过配置搭配出各种风格，支持个人博客、文档站、知识库等场景。
-  - icon: 📝
-    title: 专注内容
-    details: 只需 Markdown 即可轻松创建美观的文档站点，配合多维索引快速定位每个知识点。
+  - title: 简
+    icon: 🛠️
+    details: 下载代码即可运行，无需配置，开箱即用。
+  - title: 快
+    icon: 💪
+    details: 并发高 700%；启动快 10 倍。
+  - title: 轻
+    icon: 🛬
+    details: 内存省 50%；打包小 90%。
+  - title: 稳
+    icon: 📈
+    details: 基于Solon 新一代国产Java企业级应用开发框架。  
+  - title: 新
+    icon: 🌍
+    details: 不在守旧，仅支持java17及以上的环境。
+  - title: 安全
+    icon: 🔒
+    details: 使用行业认证的Sa-Token开源、免费、轻量级的java 权限认证框架。
+  - title: 开源
+    icon: 💯
+    details: 基于MIT协议代码完全开源免费，永久免费使用。
+
+  - title: 友情链接
+    icon: 🧲
+    details: 优秀的开源希望与您一起分享。
 ---
 
-## 风格切换
 
-Teek 可以通过配置搭配出各种风格，而当前文档站默认仅演示较简约的文档风格。
+## Solon 国产Java应用开发框架
 
-在右上角 <TkIcon :icon="readingIcon" :size="20" /> 图标的 <mark>配置切换</mark> 区域可以切换其他风格。因为配置较多，很多的功能并没有完全演示，需要安装 Teek，然后自行探索出自己喜欢的风格。
+对标 Broadcom Spring 生态。并发高 700%；内存省 50%；启动快 10 倍；打包小 90%；同时支持 java8 ~ java23, native 运行时。
+
+## Sa-Token 开源、免费、轻量级的java 权限认证框架
+
+Sa-Token 是一个轻量级 java 权限认证框架，主要解决登录认证、权限认证、分布式会话、单点登录、OAuth2.0 等一系列权限相关问题。
+Sa-Token 可用于独立应用、微服务、分布式系统等各种java后端项目。
+
+## xbatis 新一代ORM框架
+基于 mybatis 扩展的ORM框架，超方便、学习成本低、优雅的API、方便扩展、功能强大。
+
+## AutoTable 自动生成数据库表结构
+根据 Java 实体，自动映射成数据库的表结构。表结构自动维护，这让我们可以专注于业务逻辑和实体，而不需要关心数据库的表、列的配置，尤其是对于开发阶段需要频繁的新增表及变更表结构，节省了大量手动工作。
+
+## 代码生成器
+只需设计好表结构 一键生成所有crud代码与页面
+降低80%的开发量 把精力都投入到业务设计上。同时支持  在线管理代码生成模板，按照自己的需求生成代码，提高开发效率。
+
+## 基于注释自动生成API文档
+使用注释生成API文档，让开发人员可以快速了解API的功能和使用方法，提高开发效率。
+基于therapi-runtime-javadoc识别注释，生成API文档。
+
+## 运行环境依赖最小化
+仅需要 jdk17 即可运行。默认采用内置数据库、本地缓存，无需其他配置，开箱即用。<br/>
 
 ## 💡 反馈交流
 
-在使用过程中有任何问题和想法，请给我提 [Issue](https://github.com/Kele-Bingtang/vitepress-theme-teek/issues)。 你也可以在 Issue 查看别人提的问题和解决方案。
+在使用过程中有任何问题和想法，请给我提 [Issue](https://github.com/chengliang4810/jimuqu-admin/issues)。 你也可以在 Issue 查看别人提的问题和解决方案。
 
 或者加入我们的交流群（添加我的微信并备注 <mark>进群</mark>）：
 
-<img src="https://gcore.jsdelivr.net/gh/Kele-Bingtang/static/index/20250412000919.png" alt="添加我微信备注「进群」" style="width: 180px;" />
+<img src="/qrcode.jpg" alt="添加我微信备注「进群」" style="width: 180px;" />
 
-如果图片链接失效，可以在微信右上角 -> 添加朋友，然后搜索 `teekers` 来添加我的微信。
+如果图片链接失效，可以在微信右上角 -> 添加朋友，然后搜索 `chengliang4810` 来添加我的微信。
 
 <script setup lang="ts">
 import { onMounted } from "vue";

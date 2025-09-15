@@ -3,25 +3,24 @@ import llmstxt from "vitepress-plugin-llms";
 import { teekConfig } from "./teekConfig";
 
 const description = [
-  "欢迎来到 vitepress-theme-teek 使用文档",
-  "Teek 是一个基于 VitePress 构建的主题，是在默认主题的基础上进行拓展，支持 VitePress 的所有功能、配置",
-  "Teek 拥有三种典型的知识管理形态：结构化、碎片化、体系化，可以轻松构建一个结构化知识库，适用个人博客、文档站、知识库等场景",
+  "积木、jimu、积木admin、jimu-admin、积木管理系统",
 ].toString();
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   extends: teekConfig,
-  title: "vitepress-theme-teek",
+  title: "积木区",
   description: description,
   cleanUrls: false,
   lastUpdated: true,
   lang: "zh-CN",
   head: [
-    [
-      "link",
-      { rel: "icon", type: "image/svg+xml", href: "/teek-logo-mini.svg" },
-    ],
-    ["link", { rel: "icon", type: "image/png", href: "/teek-logo-mini.png" }],
+    ["link", { rel: "icon", href: "/favicon.ico" }],
+    // [
+    //   "link",
+    //   { rel: "icon", type: "image/svg+xml", href: "/teek-logo-mini.svg" },
+    // ],
+    ["link", { rel: "icon", type: "image/png", href: "/logo.png" }],
     ["meta", { property: "og:type", content: "website" }],
     ["meta", { property: "og:locale", content: "zh-CN" }],
     ["meta", { property: "og:title", content: "Teek | VitePress Theme" }],
@@ -30,7 +29,7 @@ export default defineConfig({
     ["meta", { property: "og:url", content: "" }],
     ["meta", { property: "og:description", description }],
     ["meta", { name: "description", description }],
-    ["meta", { name: "author", content: "Teek" }],
+    ["meta", { name: "author", content: "chengliang4810" }],
     // 禁止浏览器缩放
     // [
     //   "meta",
@@ -58,7 +57,7 @@ export default defineConfig({
     },
   },
   sitemap: {
-    hostname: "https://vp.teek.top", // ** 换成你的域名
+    hostname: "https://doc.jimuqu.com", // ** 换成你的域名
     transformItems: (items) => {
       const permalinkItemBak: typeof items = [];
       // 使用永久链接生成 sitemap
@@ -74,11 +73,14 @@ export default defineConfig({
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: "/teek-logo-mini.svg",
+    logo: "/logo.png",
+    externalLinkIcon: true,
     darkModeSwitchLabel: "主题",
     sidebarMenuLabel: "菜单",
     returnToTopLabel: "返回顶部",
     lastUpdatedText: "上次更新时间",
+    darkModeSwitchTitle: "切换到深色模式",
+    lightModeSwitchTitle: "切换到浅色模式",
     outline: {
       level: [2, 4],
       label: "本页导航",
@@ -102,29 +104,31 @@ export default defineConfig({
           { text: "归档页", link: "/archives" },
           { text: "清单页", link: "/articleOverview" },
           { text: "登录页", link: "/login" },
-          {
-            text: "风险链接提示页",
-            link: "/risk-link?target=https://vp.teek.top",
-          },
           { text: "分类页", link: "/categories" },
           { text: "标签页", link: "/tags" },
         ],
       },
-      { text: "✨ 赞赏", link: "/personal/" },
     ],
     socialLinks: [
       {
         icon: "github",
-        link: "https://github.com/Kele-Bingtang/vitepress-theme-teek",
+        link: "https://github.com/chengliang4810/jimuqu-admin",
       },
     ],
+    // 搜索功能
     search: {
-      provider: "local",
+      // provider: 'local'
+      provider: "algolia",
+      options: {
+        appId: "2GDHP2JZGR",
+        apiKey: "f37974ce9f9221371283a6cd21a48e16",
+        indexName: "doc",
+      },
     },
     editLink: {
       text: "在 GitHub 上编辑此页",
       pattern:
-        "https://github.com/Kele-Bingtang/vitepress-theme-teek/edit/master/docs/:path",
+        "https://github.com/chengliang4810/jimuqu-docs/edit/master/docs/:path",
     },
   },
   vite: {

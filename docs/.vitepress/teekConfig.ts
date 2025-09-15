@@ -15,11 +15,11 @@ export const teekConfig = defineTeekConfig({
   },
   footerInfo: {
     theme: {
-      name: `Theme By Teek@${version}`,
+      show: false,
     },
     copyright: {
       createYear: 2025,
-      suffix: "Teek",
+      suffix: "jimuqu.com",
     },
   },
   codeBlock: {
@@ -37,7 +37,7 @@ export const teekConfig = defineTeekConfig({
   markdown: {
     demo: {
       githubUrl:
-        "https://github.com/Kele-Bingtang/vitepress-theme-teek/blob/master/docs",
+        "https://github.com/chengliang4810/jimuqu-docs/blob/master/docs",
     },
   },
 });
