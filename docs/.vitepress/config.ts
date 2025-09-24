@@ -1,6 +1,7 @@
 import { defineConfig } from "vitepress";
 import llmstxt from "vitepress-plugin-llms";
 import { teekConfig } from "./teekConfig";
+import { MermaidPlugin } from "vitepress-plugin-mermaid";
 
 const description = [
   "积木、jimu、积木admin、jimu-admin、积木管理系统",
@@ -120,7 +121,13 @@ export default defineConfig({
     },
   },
   vite: {
-    plugins: [llmstxt() as any],
+    plugins: [llmstxt() as any, MermaidPlugin()],
+     optimizeDeps: {
+      include: ['mermaid']
+    },
+    ssr: {
+      noExternal: ['mermaid']
+    }
   },
   // transformHtml: (code, id, context) => {
   //   if (context.page !== "404.md") return code;

@@ -1,9 +1,10 @@
 import { defineTeekConfig } from "vitepress-theme-teek/config";
 import { version } from "vitepress-theme-teek/es/version";
+import { MermaidMarkdown } from "vitepress-plugin-mermaid";
 
 export const teekConfig = defineTeekConfig({
   sidebarTrigger: true,
-  author: { name: "Teeker", link: "https://github.com/Kele-Bingtang" },
+  author: { name: "chengliang4810", link: "https://github.com/chengliang4810" },
   footerInfo: {
     theme: {
       show: false,
@@ -26,6 +27,9 @@ export const teekConfig = defineTeekConfig({
     },
   },
   markdown: {
+     config: (md) => {
+      md.use(MermaidMarkdown);
+    },
     demo: {
       githubUrl:
         "https://github.com/chengliang4810/jimuqu-docs/blob/master/docs",
