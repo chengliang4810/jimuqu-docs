@@ -96,18 +96,6 @@ export default defineConfig({
         link: "/guide/intro",
         activeMatch: "/01.指南/",
       },
-      { text: "配置", link: "/reference/config", activeMatch: "/10.配置/" },
-      { text: "开发", link: "/develop/intro", activeMatch: "/15.主题开发/" },
-      {
-        text: "功能页",
-        items: [
-          { text: "归档页", link: "/archives" },
-          { text: "清单页", link: "/articleOverview" },
-          { text: "登录页", link: "/login" },
-          { text: "分类页", link: "/categories" },
-          { text: "标签页", link: "/tags" },
-        ],
-      },
     ],
     socialLinks: [
       {
