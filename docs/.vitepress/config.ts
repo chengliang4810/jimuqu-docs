@@ -97,6 +97,11 @@ export default defineConfig({
         link: "/guide/intro",
         activeMatch: "/01.指南/",
       },
+      {
+        text: "赞助",
+        link: "/sponsor/list",
+        activeMatch: "/999.赞助/",
+      },
     ],
     socialLinks: [
       {
@@ -122,7 +127,7 @@ export default defineConfig({
   },
   vite: {
     plugins: [llmstxt() as any, MermaidPlugin()],
-     optimizeDeps: {
+    optimizeDeps: {
       include: ['mermaid']
     },
     ssr: {
